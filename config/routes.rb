@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/edit'
+
+  get 'sessions/destroy'
+
   get 'site/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
