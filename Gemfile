@@ -37,6 +37,13 @@ group :development do
   gem 'letter_opener'
 end
 
+# Use rspec and factory-girl-rails for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
