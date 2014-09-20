@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Gem to upload images
+gem 'paperclip'
+gem 'aws-sdk'
+
 # Use pry-rails for development
 
 group :development do
