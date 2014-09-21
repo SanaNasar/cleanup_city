@@ -1,4 +1,12 @@
+body {
+  padding-top: 20px;
+}
+
 #topbackground {
-  background: url("");
+ /* background: url("http://unsplash.s3.amazonaws.com/batch%208/carmel.jpg") no-repeat center center;*/
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   
 }
