@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :avatar
+  attr_accessor :avatar_file_name
   
   has_secure_password # for hand written rails oauth
   
@@ -7,8 +8,12 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :images
 
-  has_attached_file :avatar,
-  styles:{
+  validates :first_name, presence: true
+  validates :avatar,
+    attachment_content_type: { content_type: /\Aimage\/.*\Z/ },
+    attachment_size: { less_than: 5.megabytes }
+
+  has_attached_file :avatar, styles:{
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
@@ -22,10 +27,5 @@ class User < ActiveRecord::Base
       :access_key_id=> ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
-
-
-  validates_attachment_content_type :avatar, :content_type=> /\Aimage\/.*\Z/
-
-
 
 end
