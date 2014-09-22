@@ -1,2 +1,17 @@
 <h1>Images#new</h1>
-<p>Find me in app/views/images/new.html.erb</p>
+<h1>Upload an image</h1>
+
+<%= form_for(@image, multipart: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :trash %>
+    <%= f.file_field :trash %><br/>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Upload It' %><br/>
+    <%= link_to 'Nevermind', root_path, class: 'button' %>
+  </div>
+<% end %>
+
+<%= image_tag @image.trash.url(:square) %>
+

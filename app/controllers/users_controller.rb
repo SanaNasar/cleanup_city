@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-# skip_before_action :is_authenticated?, only: [:new, :create]
+skip_before_action :is_authenticated?, only: [:new, :create]
 
   def index
     redirect_to '/'
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name, :password)
+    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name, :password, :password_confirmation)
     @user = User.create(user_info)
     if @user.errors.any?
       # puts "no user was created, why?!?"
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    user_info = params.require(:user).permit(:email, :first_name, :last_name,)
+    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name,)
     user = User.find_by_id(params[:id])
     user.update_attributes(user_info) if (user)
     redirect_to users_path
@@ -59,5 +59,12 @@ class UsersController < ApplicationController
     user.destroy
     redirect_to users_path
   end
+
+   private
+
+    def find_user_id
+      user_id = params[:id]
+      @user = User.find_by_id(user_id)
+    end
 
 end

@@ -1,18 +1,4 @@
 Rails.application.routes.draw do
- 
-  get 'images/index'
-
-  get 'images/new'
-
-  get 'images/show'
-
-  get 'images/edit'
-
-  get 'images/create'
-
-  get 'images/update'
-
-  get 'images/destroy'
 
   root 'site#index'
 
@@ -28,10 +14,16 @@ Rails.application.routes.draw do
 
   post 'session/destroy', to: 'session#destroy' 
 
-  delete '/users/:user_id/saved_msgs', to: 'saved_msgs#destroyAll'
-
   get "/logout" => "session#destroy" #TODO: DELETE THIS BEFORE PRODUCTION
 
+  get '/explore', to: 'images#new'
+
+  post '/explore', to: 'images#create'
+
   resources :users
+
+  resources :passwords
+
+  resources :images
 
 end
