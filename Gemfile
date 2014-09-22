@@ -34,7 +34,6 @@ gem 'paperclip'
 gem 'aws-sdk'
 
 # Use pry-rails for development
-
 group :development do
   gem 'pry'
   gem 'pry-rails'
