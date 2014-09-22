@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
+  attr_accessor :avatar
+  
   has_secure_password # for hand written rails oauth
   
-  attr_accessor :avatar
+
   has_many :posts
   has_many :images
 
