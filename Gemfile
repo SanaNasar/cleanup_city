@@ -34,6 +34,9 @@ gem 'paperclip'
 # gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 
+# Gem for setting up to render angular templates
+gem 'angular-rails-templates'
+
 # Use pry-rails for development
 group :development do
   gem 'pry'
