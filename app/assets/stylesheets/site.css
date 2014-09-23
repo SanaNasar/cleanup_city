@@ -45,14 +45,11 @@ height: 100%;
 
 .goal {
   text-align: center;
-  /*color: #33536d;*/
-  /*font-weight: bold;
-  font-family: Comic Sans, Comic Sans MS, cursive;*/
 }
 
 .footer {
   text-align: right;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .featurette-divider{

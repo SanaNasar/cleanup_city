@@ -31,7 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Gem to upload images
 gem 'paperclip'
-# gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+
 gem 'aws-sdk'
 
 # Gem for setting up to render angular templates

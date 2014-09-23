@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
 
     if @image.save
-      redirect_to @image, notice: 'Image wpas successfully uploaded.'
+      redirect_to @image
      else
        render action: 'new'
     end
