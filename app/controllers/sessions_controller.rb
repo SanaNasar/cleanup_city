@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   
   def new
     #my login form
+    # render :new
   end
 
   def create
@@ -22,6 +23,7 @@ class SessionsController < ApplicationController
       # render text: "You've destroyed the session"
       redirect_to '/', notice: "You have successfully logged out!"
   end
+  
   def edit
 
   end

@@ -4,18 +4,23 @@ Rails.application.routes.draw do
 
   get '/about', to: 'site#about'
 
-  get '/login', to: 'session#new'
+  # routes for login
+  get '/login', to: 'sessions#new'
 
-  post '/login', to: 'session#create'
+  post '/login', to: 'sessions#create'
 
+  # routes for signup
   get '/signup', to: 'users#new'
 
   post '/signup', to: 'users#create'
 
-  post 'session/destroy', to: 'session#destroy' 
 
-  get "/logout" => "session#destroy" #TODO: DELETE THIS BEFORE PRODUCTION
+  # routes for logout
+  post 'session/destroy', to: 'sessions#destroy' 
 
+  get "/logout" => "sessions#destroy" #TODO: DELETE THIS BEFORE PRODUCTION
+
+  # routes for uploading images
   get '/explore', to: 'images#new'
 
   post '/explore', to: 'images#create'

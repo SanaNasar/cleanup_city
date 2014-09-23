@@ -38,9 +38,7 @@
 
     <div class="collapse navbar-collapse navbar-right pull-right" id="bs-example-navbar-collapse-1"> 
       <ul class="nav navbar-nav">
-        <% if session[:user_id] != nil %>
-          <li class="active"><a href="javascript:void(0);"><%= @user_name.first_name %></a></li>
-        <% end %>
+    
         <li><a href="/about">About</a></li>
         <li class="divider"></li>
           <% if session[:user_id] == nil %>
@@ -52,7 +50,7 @@
             <li class="divider-vertical"></li>
             <li><a href="/explore">Explore</a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle navbar-right" href="#" data-toggle="dropdown">Login <strong class="caret"></strong></a>
+               <li><a href="/login">Login</a></li>
             </li>
         </ul>
     </div>
