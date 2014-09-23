@@ -16,14 +16,14 @@ Rails.application.routes.draw do
 
 
   # routes for logout
-  post 'session/destroy', to: 'sessions#destroy' 
+  post 'session/destroy', to: 'sessions#sdestroy' 
 
   get "/logout" => "sessions#destroy" #TODO: DELETE THIS BEFORE PRODUCTION
 
-  # routes for uploading images
-  get '/explore', to: 'images#new'
+  # # routes for uploading images
+  # get '/explore', to: 'images#new'
 
-  post '/explore', to: 'images#create'
+  # post '/explore', to: 'images#create'
 
   resources :users
 

@@ -1,2 +1,13 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<!-- index.html.erb -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-6">
+
+    <h1>Find all images here!!</h1>
+
+  <%= link_to 'Upload', new_image_path, class: 'button' %><br/>
+  <%= link_to 'Go Back', root_path, class: 'button' %>
+</div>
+</div>
+
