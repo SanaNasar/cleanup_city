@@ -6,6 +6,10 @@
 
     <h1>Find all images here!!</h1>
 
+    <% @images.each do |image| %>
+    <%= image_tag @image.trash.url(:square) %>
+    <% end %>
+
   <%= link_to 'Upload', new_image_path, class: 'button' %><br/>
   <%= link_to 'Go Back', root_path, class: 'button' %>
 </div>

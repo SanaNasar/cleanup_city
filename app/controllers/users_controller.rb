@@ -1,23 +1,23 @@
 class UsersController < ApplicationController
 
-skip_before_action :is_authenticated?, only: [:new, :create]
+# skip_before_action :is_authenticated?, only: [:new, :create]
 
   def index
     redirect_to '/'
+    @users = User.all
   end
 
   def new
     if session[:user_id] == nil
-      @user = User.new 
+      @user = User.new
     else
-      redirect_to '/'
+      redirect_to user_path(session[:user_id])
     end
-    # user_name
-
   end
 
   def create
-    user_info = params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
+  if session[:user_id] == nil
+    user_info = params.require(:user).permit(:email, :first_name, :last_name, :password)
     @user = User.create(user_info)
     if @user.errors.any?
       # puts "no user was created, why?!?"
@@ -28,26 +28,34 @@ skip_before_action :is_authenticated?, only: [:new, :create]
       session[:user_id] = @user.id
       redirect_to user_path(@user.id), :notice => "You have just logged in!"
     end
-    # redirect_to users_path
   end
 
   def show
-    # if session[:user_id] != nil
-    #   @current_user = current_user
-    #   @user = User.find_by_id(params[:id])
-    #   user_name
-    # else
+    if session[:user_id] != nil
+      if session[:user_id].to_i == params[:id].to_i
+        @user = User.find_by_id(params[:id])
+      else 
+        redirect_to user_path(session[:user_id])
+      end
+    else
       redirect_to '/'
-    # end
-
+    end
   end
 
   def edit
-    @user = User.find(params[:id])
-    user_name
+    if session[:user_id] != nil
+      if session[:user_id].to_i == params[:id].to_i
+        @user = User.find(params[:id])
+      else
+        redirect_to user_path(session[:user_id])
+      end
+        redirect_to edit_user_path(session[:user_id])
+    end
   end
 
   def update
+    find_user_id
+    @current_user = current_user
     user_info = params.require(:user).permit(:email, :first_name, :last_name,)
     user = User.find_by_id(params[:id])
     user.update_attributes(user_info) if (user)
@@ -60,11 +68,13 @@ skip_before_action :is_authenticated?, only: [:new, :create]
     redirect_to users_path
   end
 
+   
    private
 
     def find_user_id
       user_id = params[:id]
       @user = User.find_by_id(user_id)
     end
+  end
 
 end

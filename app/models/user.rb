@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   has_many :images
 
   validates :first_name, presence: true
-
+  validates :email, presence: true
+  
   def set_password_reset
     self.code = SecureRandom.urlsafe_base64
     self.expires_at = 4.hours.from_now
