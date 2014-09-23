@@ -16,7 +16,6 @@ body {
 
 #tag{
   color: #33536d;
-  font-weight: bold;
   font-family: Open Sans,'Karla', sans-serif;
 
 }
@@ -46,9 +45,9 @@ height: 100%;
 
 .goal {
   text-align: center;
-  color: #33536d;
-  font-weight: bold;
-  font-family: Comic Sans, Comic Sans MS, cursive;
+  /*color: #33536d;*/
+  /*font-weight: bold;
+  font-family: Comic Sans, Comic Sans MS, cursive;*/
 }
 
 .footer {

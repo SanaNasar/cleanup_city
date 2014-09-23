@@ -1,7 +1,7 @@
 class SiteController < ApplicationController
   def index 
     # @images = UnsavedMsg.new
-    # user_name
+    user_name
   end
 
 

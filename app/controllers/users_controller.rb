@@ -17,7 +17,7 @@ skip_before_action :is_authenticated?, only: [:new, :create]
   end
 
   def create
-    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name, :password, :password_confirmation)
+    user_info = params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
     @user = User.create(user_info)
     if @user.errors.any?
       # puts "no user was created, why?!?"
@@ -48,7 +48,7 @@ skip_before_action :is_authenticated?, only: [:new, :create]
   end
 
   def update
-    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name,)
+    user_info = params.require(:user).permit(:email, :first_name, :last_name,)
     user = User.find_by_id(params[:id])
     user.update_attributes(user_info) if (user)
     redirect_to users_path
