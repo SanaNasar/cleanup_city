@@ -2,16 +2,31 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-offset-1 col-xs-6">
+    <div class="col-xs-12">
 
-    <h1>Find all images here!!</h1>
-
+    <h1>All reported images</h1>
+    <hr>
+     
+<!--   <div > -->
     <% @images.each do |image| %>
-    <%= image_tag @image.trash.url(:square) %>
+    <div class="col-xs-18 col-sm-6 col-md-3">
+      <div class="thumbnail">
+    <%= image_tag image.trash.url(:square), class: "img-thumbnail"%>
+    <div class="caption">
+       <h4>Notes:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
     <% end %>
 
-  <%= link_to 'Upload', new_image_path, class: 'button' %><br/>
-  <%= link_to 'Go Back', root_path, class: 'button' %>
+
+  </div><br>
+  <%= link_to 'Go Back', root_path, class: 'btn btn-default' %>
+  <%= link_to 'Upload', new_image_path, class: 'btn btn-default' %><br/>
+    </div>
+    
 </div>
 </div>
 

@@ -1,12 +1,19 @@
-<h1>Images#new</h1>
-<h1>Upload an image</h1>
+<!-- <h1>Images#new</h1> -->
+<div class="container">
+  <div class="row">
+  <div class="col-xs-12">
+  <h3>Upload and make a difference</h3>
 
-<%= form_for(@image, multipart: true) do |f| %>
+  <%= form_for(@image, multipart: true) do |f| %>
 
   <div class="field">
-    <%= f.label :trash %>
+    <%= f.label :PickOne %>
     <%= f.file_field :trash %><br/>
   </div>
+
+<!--   <textarea cols="20" rows="40" id="note_body" name="note[body]">
+  </textarea> -->
+
   <div class="actions">
     <%= f.submit 'Upload It' %><br/>
     <%= link_to 'Nevermind', root_path, class: 'button' %><br/>

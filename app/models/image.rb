@@ -1,5 +1,6 @@
 class Image < ActiveRecord::Base
   attr_accessor :trash
+  attr_accessor :note
 
   validates :trash,
     attachment_content_type: { content_type: /\Aimage\/.*\Z/ },

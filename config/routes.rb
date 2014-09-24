@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'passwords/new'
+
   root 'site#index'
 
   get '/about', to: 'site#about'

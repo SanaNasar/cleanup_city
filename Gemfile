@@ -41,6 +41,9 @@ gem 'angular-rails-templates'
 group :development do
   gem 'pry'
   gem 'pry-rails'
+end
+
+group :development do
   gem 'letter_opener'
 end
 

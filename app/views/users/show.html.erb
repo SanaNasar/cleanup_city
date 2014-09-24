@@ -1,15 +1,13 @@
 <!-- user - show.html.erb -->
 
-<h1>User Home Page</h1>
-
 <div class="container">
+  <h1>User Home Page</h1>
   <%= form_for @user do |f| %>
     <h3 style="margin: -3px;">
     <%= f.label :email, "#{@user.email}" %></br>
 
-    <% if @user.id == @current_user.id %>
-      <%= link_to "View All Your Images", user_images_path(@current_user) %>
-      <%= link_to "Upload A New Image", new_image_path(@current_user) %>
+    <% if @current_user and @user.id == @current_user.id %>
+      <h3> Write something here!</h3>
   </br></br>
     <% end %>
 

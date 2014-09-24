@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
 
     if @image.save
-      redirect_to @image
+      redirect_to images_url
      else
        render action: 'new'
     end

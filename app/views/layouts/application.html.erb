@@ -55,11 +55,14 @@
             <li class="divider-vertical"></li>
             <li><a href="/images">Explore</a></li>
             <li class="dropdown">
+              <% if session[:user_id] == nil %>
                <li><a href="/login">Login</a></li>
+              <% end %>
             </li>
         </ul>
     </div>
   </nav>
+</div>
 <!-- <div class="container"> -->
 <%= yield %>
   <div class="container">
