@@ -47,7 +47,9 @@
         <li><a href="/about">About</a></li>
         <li class="divider"></li>
           <% if session[:user_id] == nil %>
-            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/signup">SignUp</a></li>
+          <% else %>
+          <li><a href="/logout">Logout</a></li>
           <% end %>
 
             <!-- <li><a href="/login">Log In</a></li> -->

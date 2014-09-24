@@ -1,6 +1,14 @@
-<h2>Enter your email to reset password</h2>
+<div class="container">
+  <h4 class="subtitle text-center">Reset Password</h4>
+<div class="form">
 
+  <div class="col-md-4 col-md-offset-4">
     <%= form_tag passwords_path do %>
-    <p><%= text_field_tag :email, nil, placeholder: "Enter your email" %>
-    <%= submit_tag "Reset Password" %></p>
+      <%= text_field_tag :email, nil, placeholder: "Enter valid email", class: "form-control" %><br>
+      <%= submit_tag "Click to Reset Password", class: "btn form-control btn-primary" %><br>
     <% end %>
+  </div>
+
+</div>
+
+</div>
