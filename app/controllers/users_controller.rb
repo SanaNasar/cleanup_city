@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def create
     if session[:user_id] == nil
-      user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name, :password)
+      user_info = params.require(:user).permit(:email,:first_name, :last_name, :password)
       @user = User.create(user_info)
       if @user.errors.any?
         # puts "no user was created, why?!?"
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   def update
     find_user_id
     @current_user = current_user
-    user_info = params.require(:user).permit(:email, :avatar, :first_name, :last_name,)
+    user_info = params.require(:user).permit(:email, :first_name, :last_name,)
     user = User.find_by_id(params[:id])
     user.update_attributes(user_info) if (user)
     redirect_to users_path

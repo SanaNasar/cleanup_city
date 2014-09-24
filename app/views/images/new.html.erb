@@ -9,10 +9,8 @@
   <div class="field">
     <%= f.label :PickOne %>
     <%= f.file_field :trash %><br/>
-  </div>
-
-<!--   <textarea cols="20" rows="40" id="note_body" name="note[body]">
-  </textarea> -->
+    <%= f.text_area :note %><br>
+</div>
 
   <div class="actions">
     <%= f.submit 'Upload It' %><br/>

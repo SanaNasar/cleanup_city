@@ -1,8 +1,11 @@
 <!-- user - show.html.erb -->
-
+<!-- user home page
+ -->
 <div class="container">
-  <h1>User Home Page</h1>
   <%= form_for @user do |f| %>
+    <h3 style="margin: -3px;">
+      <%= f.label :first_name, "Welcome #{@user.first_name} to your homepage" %></br>
+
     <h3 style="margin: -3px;">
     <%= f.label :email, "#{@user.email}" %></br>
 
