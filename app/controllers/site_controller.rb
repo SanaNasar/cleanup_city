@@ -9,4 +9,13 @@ class SiteController < ApplicationController
     # user_name
     render :about 
   end
+
+  def terms
+    render :terms
+  end
+
+  def maps
+    render :maps
+  end
+  
 end

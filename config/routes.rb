@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   get '/about', to: 'site#about'
 
+  get '/terms', to: 'site#terms'
+
+  get '/maps', to: 'site#maps'
+
   # routes for login
   get '/login', to: 'sessions#new'
 
@@ -15,6 +19,9 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
 
   post '/signup', to: 'users#create'
+
+  #routes for map
+  # get '/maps'
 
 
   # routes for logout

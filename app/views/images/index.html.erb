@@ -15,7 +15,9 @@
     <div class="caption">
        <h4>Notes:</h4>
                 <p><%= image.note %></p>
+                 <% if session[:user_id] != nil %>
                 <p><a href="#" class="btn btn-info btn-xs" role="button">LikeIt</a> <a href="#" class="btn btn-default btn-xs" role="button">Volunteer</a></p>
+                <% end %>
             </div>
           </div>
         </div>
