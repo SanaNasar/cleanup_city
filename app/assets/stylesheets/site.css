@@ -48,8 +48,9 @@ height: 100%;
 }
 
 .footer {
-  text-align: right;
+  text-align: left;
   font-size: 14px;
+/*  padding-bottom: 10px;*/
 }
 
 .featurette-divider{
@@ -79,5 +80,5 @@ height: 100%;
 }
 
 .terms {
-  text-align: left;
+  text-align: right;
 }
