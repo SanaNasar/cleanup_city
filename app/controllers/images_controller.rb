@@ -7,11 +7,12 @@ class ImagesController < ApplicationController
 
   # GET /friends/new
   def new
-    @image = Image.new
+    @image = Image.new  
   end
 
   def create
     @image = Image.new(image_params)
+    # @note = note.new
 
     if @image.save
       redirect_to images_url
