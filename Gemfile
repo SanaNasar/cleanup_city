@@ -54,6 +54,9 @@ group :development, :test do
   gem 'ffaker'
 end
 
+# gem 'sidekiq'
+
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

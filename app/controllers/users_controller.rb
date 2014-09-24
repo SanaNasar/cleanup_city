@@ -50,7 +50,7 @@ class UsersController < ApplicationController
       else
         redirect_to user_path(session[:user_id])
       end
-        redirect_to edit_user_path(session[:user_id])
+        # redirect_to edit_user_path(session[:user_id])
     end
   end
 
