@@ -56,6 +56,10 @@ group :development, :test do
   gem 'ffaker'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # gem 'sidekiq'
 
 
