@@ -34,7 +34,9 @@ I always find myself wondering, about the dirty stairs or the broken parking met
 * Bootstrap (Front-end framework)
 * Handrolled Rails user authentication
 * Amazon S3 (cloud storage) and Paperclip (uploading pictures)
+* Postgresql, SQL (Database)
 * Google maps API for geotagging the location
+* Heroku (Deployment)
 
 ## What's next??
 
