@@ -7,6 +7,8 @@ Cleanup City is an app that helps residents to identify public safety, environme
 
 **"A picture tells thousand words"**
 
+![cleanupcity](app/assets/images/report.jpg)
+
 Cleanup City is a collaborative platform that gives an opportunity for residents, neighborhood groups and associations to focus on cleaning, greening and organize events for the city clean up.
 
 ## User stories
@@ -34,7 +36,9 @@ I always find myself wondering, about the dirty stairs or the broken parking met
 * Bootstrap (Front-end framework)
 * Handrolled Rails user authentication
 * Amazon S3 (cloud storage) and Paperclip (uploading pictures)
+* Postgresql, SQL (Database)
 * Google maps API for geotagging the location
+* Heroku (Deployment)
 
 ## What's next??
 
