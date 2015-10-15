@@ -30,7 +30,7 @@ I always find myself wondering, about the dirty stairs or the broken parking met
 
 ## Technologies
 
-* Ruby (Back-end programming language)
+* Ruby on Rails (Back-end programming language)
 * Javascript, jQuery, HTML5/CSS3 (Front-end programming language)
 * Rails (Back-end framework)
 * Bootstrap (Front-end framework)
